@@ -2,24 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 
 function Container({ children }: { children: React.ReactNode }) {
-  // Figma desktop frame: 1440px
-  return <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-20">{children}</div>;
+  // Pixel-perfect reference: 1440px desktop frame
+  return <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-20">{children}</div>;
 }
 
 function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
       <Container>
-        <div className="relative pt-10">
+        {/* 3-column layout prevents left menu from "spreading" and keeps center logo truly centered */}
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center pt-10">
           {/* Left: hamburger + MENU */}
-          <button className="absolute left-0 top-10 inline-flex items-center gap-3 text-label text-white/80 hover:text-white">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/figma/assets/icons/navigation/menu-hamburger.svg" alt="" className="h-4 w-4 opacity-90" />
-            <span>MENU</span>
-          </button>
+          <div className="justify-self-start">
+            <button className="inline-flex items-center gap-3 whitespace-nowrap text-label text-white/80 hover:text-white">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/figma/assets/icons/navigation/menu-hamburger.svg" alt="" className="h-4 w-4 opacity-90" />
+              <span>MENU</span>
+            </button>
+          </div>
 
           {/* Center: logo */}
-          <div className="flex justify-center">
+          <div className="justify-self-center">
             <Link href="/" className="inline-flex flex-col items-center gap-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="Aşhan" className="h-6 w-auto" />
@@ -39,12 +42,14 @@ function Header() {
           </div>
 
           {/* Right: CTA */}
-          <Link
-            href="/tr/iletisim"
-            className="absolute right-0 top-10 inline-flex items-center justify-center rounded-full border border-white/25 bg-white/0 px-6 py-3 text-label text-white/80 hover:bg-white/10 hover:text-white"
-          >
-            İLETİŞİME GEÇ
-          </Link>
+          <div className="justify-self-end">
+            <Link
+              href="/tr/iletisim"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/25 bg-white/0 px-6 py-3 text-label text-white/80 hover:bg-white/10 hover:text-white"
+            >
+              İLETİŞİME GEÇ
+            </Link>
+          </div>
         </div>
       </Container>
     </header>

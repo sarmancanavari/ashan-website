@@ -2,37 +2,54 @@ import Image from "next/image";
 import Link from "next/link";
 
 function Container({ children }: { children: React.ReactNode }) {
-  return <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">{children}</div>;
+  // Figma desktop frame: 1440px
+  return <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-20">{children}</div>;
 }
 
 function Header() {
   return (
-    <header className="absolute inset-x-0 top-0 z-20">
+    <header className="absolute inset-x-0 top-0 z-30">
       <Container>
-        <div className="flex items-center justify-between py-6">
+        <div className="flex items-center justify-between pt-10">
           <Link href="/" className="inline-flex items-center gap-3">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="Aşhan" className="h-8 w-auto" />
+            <span className="inline-flex items-center gap-2">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="" className="h-7 w-auto" />
+              <span className="inline-flex items-center gap-0.5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/figma/assets/logos/brand/ashan-letter-a1.svg" alt="A" className="h-6 w-auto" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/figma/assets/logos/brand/ashan-letter-s.svg" alt="ş" className="h-6 w-auto" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/figma/assets/logos/brand/ashan-letter-h.svg" alt="h" className="h-6 w-auto" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/figma/assets/logos/brand/ashan-letter-a2.svg" alt="a" className="h-6 w-auto" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/figma/assets/logos/brand/ashan-letter-n.svg" alt="n" className="h-6 w-auto" />
+              </span>
+            </span>
           </Link>
-          <nav className="hidden items-center gap-7 text-sm font-medium text-white/85 md:flex">
-            <Link href="/tr/kurumsal/hakkimizda" className="hover:text-white">
+
+          <nav className="hidden items-center gap-10 md:flex">
+            <Link href="/tr/kurumsal/hakkimizda" className="text-body-sm text-white/80 hover:text-white">
               Kurumsal
             </Link>
-            <Link href="/tr/faaliyet-alanlari" className="hover:text-white">
+            <Link href="/tr/faaliyet-alanlari" className="text-body-sm text-white/80 hover:text-white">
               Faaliyet Alanları
             </Link>
-            <Link href="/tr/sirketlerimiz" className="hover:text-white">
+            <Link href="/tr/sirketlerimiz" className="text-body-sm text-white/80 hover:text-white">
               Şirketlerimiz
             </Link>
-            <Link href="/tr/iletisim" className="hover:text-white">
+            <Link href="/tr/iletisim" className="text-body-sm text-white/80 hover:text-white">
               İletişim
             </Link>
           </nav>
+
           <div className="flex items-center gap-3">
-            <button className="hidden rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-white/90 hover:bg-white/10 md:inline-flex">
+            <button className="hidden rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-label text-white/90 hover:bg-white/10 md:inline-flex">
               TR
             </button>
-            <button className="inline-flex rounded-full bg-[#bd9b60] px-4 py-2 text-xs font-semibold text-[#1c140f] hover:bg-[#caa86d]">
+            <button className="inline-flex rounded-full bg-[var(--primary-400-main)] px-5 py-2.5 text-label text-[#1c140f] hover:bg-[var(--primary-500)]">
               Teklif Al
             </button>
           </div>
@@ -121,29 +138,31 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-[#2a1f16]" />
 
         <Container>
-          <div className="relative flex min-h-[78vh] flex-col items-center justify-center pb-16 pt-32 text-center">
+          <div className="relative flex min-h-[820px] flex-col items-center justify-center pb-24 pt-44 text-center">
             <div className="flex flex-col items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="" className="h-10 w-10 opacity-90" />
-              <h1 className="mt-6 text-5xl font-semibold leading-[0.95] tracking-tight sm:text-7xl">
-                KALİTE
-                <br />
-                HİZMET
+              <img src="/figma/assets/decorative/star-small.svg" alt="" className="h-10 w-10 opacity-90" />
+
+              <h1 className="mt-8 text-heading-xl tracking-tight text-white">
+                <span className="block">KALİTE</span>
+                <span className="block text-heading-xl-italic">HİZMET</span>
               </h1>
-              <p className="mt-5 max-w-xl text-sm leading-7 text-white/75 sm:text-base">
-                Catering ve ikram hizmetleri, restoran & kafeterya işletmeciliği ve entegre tesis yönetimi alanlarında
-                güvenilir çözüm ortağı.
+
+              <p className="mt-6 max-w-[560px] text-body-lg text-white/75">
+                Catering ve ikram hizmetleri, restoran & kafeterya işletmeciliği ve entegre tesis yönetimi alanlarında güvenilir
+                çözüm ortağı.
               </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-3">
+
+              <div className="mt-10 flex flex-wrap justify-center gap-4">
                 <Link
                   href="/tr/faaliyet-alanlari"
-                  className="inline-flex items-center justify-center rounded-full bg-[#bd9b60] px-6 py-3 text-sm font-semibold text-[#1c140f] hover:bg-[#caa86d]"
+                  className="inline-flex items-center justify-center rounded-full bg-[var(--primary-400-main)] px-10 py-4 text-body-sm text-[#1c140f] hover:bg-[var(--primary-500)]"
                 >
                   Keşfet
                 </Link>
                 <Link
                   href="/tr/iletisim"
-                  className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-10 py-4 text-body-sm text-white hover:bg-white/10"
                 >
                   İletişim
                 </Link>

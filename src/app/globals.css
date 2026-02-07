@@ -77,15 +77,58 @@
   }
 }
 
+/* Boska (local) */
+@font-face {
+  font-family: "Boska";
+  src: url("/fonts/Boska-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Boska";
+  src: url("/fonts/Boska-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Boska";
+  src: url("/fonts/Boska-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Boska";
+  src: url("/fonts/Boska-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Boska";
+  src: url("/fonts/Boska-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Boska";
+  src: url("/fonts/Boska-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  font-family: var(--font-body, "Overused Grotesk"), system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
 }
 
-/* Temporary typography mapping (until Boska/Overused Grotesk files are provided) */
 h1,
 h2,
 h3 {
-  font-family: var(--font-playfair), ui-serif, Georgia, "Times New Roman", Times, serif;
+  font-family: var(--font-heading, "Boska"), ui-serif, Georgia, "Times New Roman", Times, serif;
 }

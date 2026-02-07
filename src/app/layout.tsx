@@ -1,16 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Aşhan",
@@ -20,7 +9,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="tr">
-      <body className={`${inter.variable} ${playfair.variable} antialiased`}>{children}</body>
+      <head>
+        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=boska@300,400,500&display=swap" />
+      </head>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

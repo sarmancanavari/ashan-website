@@ -12,7 +12,7 @@ function Header() {
         <div className="flex items-center justify-between py-6">
           <Link href="/" className="inline-flex items-center gap-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/figma/assets/logo.svg" alt="Aşhan" className="h-8 w-auto" />
+            <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="Aşhan" className="h-8 w-auto" />
           </Link>
           <nav className="hidden items-center gap-7 text-sm font-medium text-white/85 md:flex">
             <Link href="/tr/kurumsal/hakkimizda" className="hover:text-white">
@@ -49,7 +49,7 @@ function Footer() {
         <div className="grid gap-10 py-14 md:grid-cols-12">
           <div className="md:col-span-5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/figma/assets/logo.svg" alt="Aşhan" className="h-8 w-auto" />
+            <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="Aşhan" className="h-8 w-auto" />
             <p className="mt-4 max-w-md text-sm leading-7 text-white/70">
               Catering ve ikram hizmetlerinden entegre tesis yönetimine uzanan operasyon kabiliyetiyle, kaliteyi standart
               haline getiriyoruz.
@@ -116,13 +116,7 @@ export default function HomePage() {
         <Header />
 
         <div className="absolute inset-0 opacity-60">
-          <Image
-            src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=2400&q=60"
-            alt=""
-            fill
-            priority
-            className="object-cover"
-          />
+          <Image src="/figma/assets/images/hero/hero-food-1.png" alt="" fill priority className="object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-[#2a1f16]" />
 
@@ -130,7 +124,7 @@ export default function HomePage() {
           <div className="relative flex min-h-[78vh] flex-col items-center justify-center pb-16 pt-32 text-center">
             <div className="flex flex-col items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/figma/assets/steps/Step=1.svg" alt="" className="h-10 w-10 opacity-90" />
+              <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="" className="h-10 w-10 opacity-90" />
               <h1 className="mt-6 text-5xl font-semibold leading-[0.95] tracking-tight sm:text-7xl">
                 KALİTE
                 <br />
@@ -187,6 +181,7 @@ export default function HomePage() {
             <div className="md:col-span-5">
               <div className="rounded-3xl border border-[#1c140f]/10 bg-white/60 p-6">
                 <div className="text-xs font-semibold tracking-wider text-[#8b6b55]">Not</div>
+              <div className="mt-2 text-[11px] font-semibold text-[#8b6b55]/80">Design tokens: <code>design-tokens.css</code> yüklendi.</div>
                 <p className="mt-3 text-sm leading-7 text-[#3b2a20]/80">
                   Bu sayfa şu an statik ilerliyor. Umbraco headless bağlandığında başlıklar, görseller ve kartlar içerikten
                   gelecek.
@@ -229,16 +224,25 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Logo strip placeholder */}
+      {/* Logo strip */}
       <section className="bg-[#f4f0e8] py-14">
         <Container>
-          <div className="text-center text-sm font-semibold text-[#3b2a20]/80">Ortak değerler etrafında şekillenen, farklı alanlarda güçlü markalar.</div>
-          <div className="mt-8 grid grid-cols-2 gap-6 text-center text-xs text-[#3b2a20]/60 sm:grid-cols-4 md:grid-cols-6">
-            {["TY YATIRIM", "ÇİFTÇİ ZİRAAT", "AHA", "HANCIOĞLU", "TRZ GIDA", "AŞHAN"].map((t) => (
-              <div key={t} className="rounded-xl border border-[#1c140f]/10 bg-white/50 px-3 py-4">
-                {t}
-              </div>
-            ))}
+          <div className="text-center text-sm font-semibold text-[#3b2a20]/80">
+            Ortak değerler etrafında şekillenen, farklı alanlarda güçlü markalar.
+          </div>
+          <div className="mt-8 grid grid-cols-2 items-center justify-items-center gap-8 sm:grid-cols-4 md:grid-cols-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/figma/assets/logos/partners/ciftci-ziraat-icon.svg" alt="Çiftçi Ziraat" className="h-10 w-auto opacity-80" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/figma/assets/logos/partners/trz-gida-icon.svg" alt="TRZ Gıda" className="h-10 w-auto opacity-80" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/figma/assets/logos/partners/aha-star.svg" alt="AHA" className="h-10 w-auto opacity-80" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/figma/assets/logos/partners/hancioglu-icon.svg" alt="Hancıoğlu Çamburnü" className="h-10 w-auto opacity-80" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="Aşhan" className="h-10 w-auto opacity-80" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/figma/assets/logos/brand/clockwork-credit.svg" alt="Clockwork" className="h-6 w-auto opacity-70" />
           </div>
         </Container>
       </section>
@@ -248,12 +252,7 @@ export default function HomePage() {
         <Container>
           <div className="grid gap-8 md:grid-cols-12 md:items-center">
             <div className="relative h-72 overflow-hidden rounded-3xl bg-zinc-200 md:col-span-7">
-              <Image
-                src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=1600&q=60"
-                alt=""
-                fill
-                className="object-cover"
-              />
+              <Image src="/figma/assets/images/hero/hero-food-2.png" alt="" fill className="object-cover" />
             </div>
             <div className="md:col-span-5">
               <div className="rounded-3xl bg-[#e9e3d8] p-6">
@@ -277,12 +276,7 @@ export default function HomePage() {
               {[1, 2, 3].map((i) => (
                 <div key={i} className="overflow-hidden rounded-3xl bg-white/70">
                   <div className="relative h-44 bg-zinc-200">
-                    <Image
-                      src={`https://images.unsplash.com/photo-1555992336-03a23c2bc0b8?auto=format&fit=crop&w=1200&q=60&sig=${i}`}
-                      alt=""
-                      fill
-                      className="object-cover"
-                    />
+                    <Image src="/figma/assets/images/blog/blog-card-image.png" alt="" fill className="object-cover" />
                   </div>
                   <div className="p-5">
                     <div className="text-xs font-semibold text-[#8b6b55]">Blog</div>

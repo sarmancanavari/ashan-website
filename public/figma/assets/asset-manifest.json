@@ -1,0 +1,114 @@
+{
+  "project": "Aşhan",
+  "exportDate": "2026-02-07",
+  "baseUrl": "http://localhost:3845/assets",
+  "designTokens": {
+    "colors": {
+      "primary-200": "#ddcfab",
+      "primary-400-main": "#bd9b60",
+      "primary-500": "#aa8248",
+      "primary-950": "#311e17",
+      "secondary-100": "#ececd5",
+      "secondary-950": "#302418",
+      "neutral-600": "#5f5b5b",
+      "neutral-950-main": "#1a1919",
+      "white-100": "#ffffff"
+    },
+    "fonts": {
+      "heading": "Boska",
+      "body": "Overused Grotesk"
+    },
+    "fontSizes": {
+      "text-xxs": "11px",
+      "text-xs": "12px",
+      "text-base": "16px",
+      "text-lg": "18px",
+      "text-2xl": "24px"
+    },
+    "spacing": {
+      "p-2": "8px",
+      "p-3": "12px",
+      "p-4": "16px",
+      "p-5": "20px",
+      "p-6": "24px",
+      "p-10": "40px",
+      "p-12": "48px",
+      "p-20": "80px",
+      "p-30": "120px"
+    },
+    "borderRadius": {
+      "button": "99px",
+      "checkbox": "2px",
+      "social-icon": "100px"
+    }
+  },
+  "pages": [
+    {"name": "Ana Sayfa v2", "nodeId": "1:5"},
+    {"name": "Menü", "nodeId": "357:1236"},
+    {"name": "Faaliyet Alanları", "nodeId": "128:5983"},
+    {"name": "Faaliyet Alanları - Detay", "nodeId": "128:6544"},
+    {"name": "Hakkımızda", "nodeId": "153:6065"},
+    {"name": "İletişim", "nodeId": "357:2215"}
+  ],
+  "assets": {
+    "icons": {
+      "navigation": [
+        {"name": "menu-hamburger", "file": "icons/navigation/menu-hamburger.svg", "hash": "22c4b95e8c686e964526072ac36011340e01b14b", "format": "svg"},
+        {"name": "arrow-left", "file": "icons/navigation/arrow-left.svg", "nodeId": "197:787", "format": "svg", "note": "Navigation arrow - get from screenshot"},
+        {"name": "arrow-right", "file": "icons/navigation/arrow-right.svg", "nodeId": "197:790", "format": "svg", "note": "Navigation arrow - get from screenshot"},
+        {"name": "scroll-up", "file": "icons/navigation/scroll-up.svg", "hash": "9c518194266105c9f17536c028ae2555eb988974", "format": "svg"},
+        {"name": "checkbox-check", "file": "icons/navigation/checkbox-check.svg", "hash": "35dc2506f1fdb5d3bcc63618b6a02d2ef1f8b52d", "format": "svg"},
+        {"name": "separator-line", "file": "icons/navigation/separator-line.svg", "hash": "c0889c35588d6c2bae542b8d0d4e5993e6d68a8e", "format": "svg"}
+      ],
+      "social": [
+        {"name": "facebook", "file": "icons/social/facebook.svg", "hash": "bccb57113729c4e0b66f7e3215925a6a6ef6459c", "format": "svg"},
+        {"name": "instagram", "file": "icons/social/instagram.svg", "hash": "2fbac709c3100d7ddcbfd6b461fbd85d0b3e683c", "format": "svg"},
+        {"name": "linkedin", "file": "icons/social/linkedin.svg", "hash": "7b970530a7b7047e1245a1104a92d7b72fd09a28", "format": "svg"},
+        {"name": "x-twitter", "file": "icons/social/x-twitter.svg", "hash": "1af657b497e56d25c30eb9281ab4efebd1555c2b", "format": "svg"},
+        {"name": "youtube", "file": "icons/social/youtube.svg", "hash": "8d7099c60dc28dcbe72dfbe42f0a69ba8abf631c", "format": "svg"}
+      ]
+    },
+    "logos": {
+      "brand": [
+        {"name": "ashan-logo-star", "file": "logos/brand/ashan-logo-star.svg", "hash": "42f64fbfa26365e5556d3166b724c4c29f0741db", "format": "svg", "note": "Navbar version - logo icon/star symbol"},
+        {"name": "ashan-letter-a1", "file": "logos/brand/ashan-letter-a1.svg", "hash": "80e299aaf3348e29dce9d92393e5a1955679b266", "format": "svg"},
+        {"name": "ashan-letter-s", "file": "logos/brand/ashan-letter-s.svg", "hash": "64bb11c481267ee196896cf3bf7449070f917ba1", "format": "svg"},
+        {"name": "ashan-letter-h", "file": "logos/brand/ashan-letter-h.svg", "hash": "545f7054b292e81fdfaa21451288aaaefdefa528", "format": "svg"},
+        {"name": "ashan-letter-a2", "file": "logos/brand/ashan-letter-a2.svg", "hash": "21c3677672390809bd6f298f4eb4090866a71ece", "format": "svg"},
+        {"name": "ashan-letter-n", "file": "logos/brand/ashan-letter-n.svg", "hash": "652a5b9fa6a27aa02773a256e5eaa470ba98dabb", "format": "svg"},
+        {"name": "ashan-logo-star-footer", "file": "logos/brand/ashan-logo-star-footer.svg", "hash": "db6aeabe0541d9a6b35a5735df759da0d9a88b44", "format": "svg", "note": "Footer version - logo star"},
+        {"name": "ashan-footer-letter-a1", "file": "logos/brand/ashan-footer-letter-a1.svg", "hash": "d48937255889e2c1d63b13c06b48fd3987c7aa81", "format": "svg"},
+        {"name": "ashan-footer-letter-s", "file": "logos/brand/ashan-footer-letter-s.svg", "hash": "af45e3ba4f4fd2adbc06aad8e561e8b9ff96707e", "format": "svg"},
+        {"name": "ashan-footer-letter-h", "file": "logos/brand/ashan-footer-letter-h.svg", "hash": "1c6799864bbc654a39a63b20bc04665106faea40", "format": "svg"},
+        {"name": "ashan-footer-letter-a2", "file": "logos/brand/ashan-footer-letter-a2.svg", "hash": "75db7354e0377f2e113ec09009e68357241da35b", "format": "svg"},
+        {"name": "ashan-footer-letter-n", "file": "logos/brand/ashan-footer-letter-n.svg", "hash": "391700071a00421ec4bd7df097895688eaf21ace", "format": "svg"},
+        {"name": "clockwork-credit", "file": "logos/brand/clockwork-credit.svg", "hash": "38845209c8521fa7fbb8cf1a300339e0294689b5", "format": "svg"}
+      ],
+      "partners": [
+        {"name": "trz-gida-icon", "file": "logos/partners/trz-gida-icon.svg", "hash": "7cef05c417cbe70b262f8a25de37899755a5083c", "format": "svg", "note": "TRZ Gıda logo - icon part"},
+        {"name": "trz-gida-icon-top", "file": "logos/partners/trz-gida-icon-top.svg", "hash": "6377f1c0c4d90c509660e6b625c9a735ad15cc17", "format": "svg"},
+        {"name": "ciftci-ziraat-icon", "file": "logos/partners/ciftci-ziraat-icon.svg", "hash": "1c8912a1c528c1ae2280d01d4cf9d4579e20d0ac", "format": "svg", "note": "Çiftçi Ziraat logo - icon part"},
+        {"name": "ciftci-ziraat-icon-top", "file": "logos/partners/ciftci-ziraat-icon-top.svg", "hash": "175c0d083731be44edeb6fdcc489ba932f7f6772", "format": "svg"},
+        {"name": "aha-lines", "file": "logos/partners/aha-lines.svg", "hash": "9da24e4304eb378740f73a542e591700362afc64", "format": "svg", "note": "AHA logo"},
+        {"name": "hancioglu-camburnu-icon", "file": "logos/partners/hancioglu-camburnu-icon.svg", "hash": "c932f9d268f2d00dbe81760cfbaa599c615c5ab9", "format": "svg", "note": "Hancıoğlu Çamburnü logo - icon part"}
+      ]
+    },
+    "images": {
+      "hero": [
+        {"name": "hero-food-1", "file": "images/hero/hero-food-1.png", "hash": "e30e705478e836a24c1fbd352e217d15585a3bd6", "format": "png"},
+        {"name": "hero-food-2", "file": "images/hero/hero-food-2.png", "hash": "dff73e87af2c9a8e2482471a98011d264f05b91f", "format": "png"},
+        {"name": "hero-food-3", "file": "images/hero/hero-food-3.png", "hash": "fe47613f78b1e246bf9154692289073884d25326", "format": "png"},
+        {"name": "hero-food-4", "file": "images/hero/hero-food-4.png", "hash": "1eede1ad694dc9a8848ae135040e66098321549d", "format": "png"}
+      ],
+      "blog": [
+        {"name": "blog-card-image", "file": "images/blog/blog-card-image.png", "hash": "9d920f30e9c906020988c4a040718d5ce4e394ff", "format": "png"}
+      ]
+    },
+    "decorative": [
+      {"name": "shape-mask", "file": "decorative/shape-mask.svg", "hash": "68905e01a0e835d4a0437aece6d6892b615c03fb", "format": "svg", "note": "Decorative leaf/organic shape - used as mask"},
+      {"name": "shape-fill", "file": "decorative/shape-fill.svg", "hash": "f6074c6dfebf028decf14d1c5fb6093067e61a0b", "format": "svg", "note": "Decorative leaf/organic shape - fill pattern"},
+      {"name": "arc-inner-shape", "file": "decorative/arc-inner-shape.svg", "hash": "a60cc626c557fe0a3f9f46b303bc677b02367db2", "format": "svg", "note": "Arc component - inner star shape"},
+      {"name": "arc-outer-ring", "file": "decorative/arc-outer-ring.svg", "hash": "0b6c71c1ecd001632dd1ee661a13ef195549b52c", "format": "svg", "note": "Arc component - outer ring with ASHAN text"}
+    ]
+  }
+}

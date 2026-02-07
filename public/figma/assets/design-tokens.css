@@ -1,0 +1,133 @@
+/* ============================================
+   AŞHAN - Design Tokens
+   Figma'dan export edildi: 2026-02-07
+   ============================================ */
+
+:root {
+  /* === COLORS === */
+  --primary-200: #ddcfab;
+  --primary-400-main: #bd9b60;
+  --primary-500: #aa8248;
+  --primary-950: #311e17;
+  --secondary-100: #ececd5;
+  --secondary-950: #302418;
+  --neutral-600: #5f5b5b;
+  --neutral-950-main: #1a1919;
+  --white-100: #ffffff;
+  --white-10: rgba(255, 255, 255, 0.1);
+  --primary-400-20: rgba(189, 155, 96, 0.2);
+  --primary-400-40: rgba(189, 155, 96, 0.4);
+
+  /* === TYPOGRAPHY === */
+  /* Font Families */
+  --font-heading: 'Boska', serif;
+  --font-body: 'Overused Grotesk', sans-serif;
+
+  /* Font Sizes */
+  --text-xxs: 11px;
+  --text-xs: 12px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-2xl: 24px;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-book: 350;
+  --font-regular: 400;
+  --font-medium: 500;
+
+  /* Line Heights */
+  --leading-tight: 1.1;
+  --leading-normal: 1.4;
+  --leading-relaxed: 1.5;
+
+  /* Letter Spacing */
+  --tracking-tight: 0.16px;
+  --tracking-normal: 0.18px;
+  --tracking-wide: 0.22px;
+  --tracking-wider: 0.24px;
+  --tracking-widest: 0.48px;
+
+  /* === SPACING === */
+  --p-2: 8px;
+  --p-3: 12px;
+  --p-4: 16px;
+  --p-5: 20px;
+  --p-6: 24px;
+  --p-10: 40px;
+  --p-12: 48px;
+  --p-20: 80px;
+  --p-30: 120px;
+
+  /* === BORDER RADIUS === */
+  --radius-button: 99px;
+  --radius-checkbox: 2px;
+  --radius-social-icon: 100px;
+
+  /* === BREAKPOINTS === */
+  --bp-desktop: 1440px;
+}
+
+/* === TYPOGRAPHY CLASSES === */
+
+/* Heading - Boska Medium */
+.text-heading-xl {
+  font-family: var(--font-heading);
+  font-weight: var(--font-medium);
+  font-size: 188px;
+  line-height: var(--leading-tight);
+  font-style: normal;
+}
+
+/* Heading - Boska Light Italic (for alternating text) */
+.text-heading-xl-italic {
+  font-family: 'Boska Variable', var(--font-heading);
+  font-weight: var(--font-light);
+  font-size: 188px;
+  line-height: var(--leading-tight);
+  font-style: italic;
+}
+
+/* Heading 2xl */
+.text-heading-2xl {
+  font-family: var(--font-heading);
+  font-weight: var(--font-medium);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-normal);
+}
+
+/* Body - Book */
+.text-body {
+  font-family: var(--font-body);
+  font-weight: var(--font-book);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* Body Large */
+.text-body-lg {
+  font-family: var(--font-body);
+  font-weight: var(--font-book);
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-normal);
+}
+
+/* Label - Medium */
+.text-label {
+  font-family: var(--font-body);
+  font-weight: var(--font-medium);
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-widest);
+}
+
+/* Caption */
+.text-caption {
+  font-family: var(--font-body);
+  font-weight: var(--font-regular);
+  font-size: var(--text-xxs);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wide);
+}

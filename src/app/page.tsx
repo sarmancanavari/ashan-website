@@ -24,20 +24,12 @@ function Header() {
 
           {/* Center: logo */}
           <div className="justify-self-center">
-            <Link href="/" className="inline-flex flex-col items-center gap-3">
+            <Link href="/" className="inline-flex flex-col items-center gap-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="Aşhan" className="h-6 w-auto" />
-              <div className="flex items-center gap-1">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/figma/assets/logos/brand/ashan-letter-a1.svg" alt="A" className="h-4 w-auto opacity-90" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/figma/assets/logos/brand/ashan-letter-s.svg" alt="Ş" className="h-4 w-auto opacity-90" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/figma/assets/logos/brand/ashan-letter-h.svg" alt="H" className="h-4 w-auto opacity-90" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/figma/assets/logos/brand/ashan-letter-a2.svg" alt="A" className="h-4 w-auto opacity-90" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/figma/assets/logos/brand/ashan-letter-n.svg" alt="N" className="h-4 w-auto opacity-90" />
+              <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="Aşhan" className="h-6 w-6" />
+              {/* Use text wordmark instead of separate letter svgs (prevents the logo from visually "spreading") */}
+              <div className="text-label text-white/80" style={{ letterSpacing: "0.42em" }}>
+                AŞHAN
               </div>
             </Link>
           </div>
@@ -208,33 +200,23 @@ export default function HomePage() {
               </div>
             </div>
             <div className="md:col-span-5">
-              <div className="rounded-3xl bg-transparent pt-1">
-                <div className="flex items-start gap-5">
+              <div className="flex items-start gap-8">
+                <div className="flex h-[92px] w-[92px] items-center justify-center rounded-full border border-[#bd9b60]/30">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/figma/assets/logos/brand/ashan-logo-star.svg"
-                    alt=""
-                    className="mt-1 h-8 w-8 opacity-80"
-                  />
-                  <div>
-                    <div className="text-xs font-semibold tracking-wider text-[#8b6b55]">HAKKIMIZDA</div>
-                    <p className="mt-4 text-sm leading-7 text-[#3b2a20]/80">
-                      Figma Anasayfa (1440) referansı birebir uygulanıyor. Bu alandaki içerikler Umbraco headless bağlandığında
-                      içerikten beslenecek.
-                    </p>
-                    <div className="mt-6">
-                      <Link
-                        href="/tr/kurumsal/hakkimizda"
-                        className="inline-flex items-center justify-center rounded-full bg-[#bd9b60] px-6 py-3 text-xs font-semibold tracking-[0.28em] text-[#1c140f]"
-                      >
-                        DETAY
-                      </Link>
-                    </div>
-                    <div className="mt-6">
-                      <Link href="/ref/home-v2" className="text-xs font-semibold text-[#8b6b55] hover:underline">
-                        Figma referans görselini aç →
-                      </Link>
-                    </div>
+                  <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="" className="h-6 w-6 opacity-70" />
+                </div>
+                <div className="pt-1">
+                  <div className="text-body text-[#3b2a20]/70">
+                    Operasyonel mükemmelliği; uzman ekip, güçlü tedarik ağı ve sürdürülebilir hizmet kültürü ile destekliyoruz.
+                    İhtiyaçlara göre ölçeklenen, ölçülebilir kalite standartları sağlıyoruz.
+                  </div>
+                  <div className="mt-8">
+                    <Link
+                      href="/tr/kurumsal/hakkimizda"
+                      className="inline-flex items-center justify-center rounded-full bg-[#bd9b60] px-6 py-3 text-xs font-semibold tracking-[0.28em] text-[#1c140f]"
+                    >
+                      DETAY
+                    </Link>
                   </div>
                 </div>
               </div>

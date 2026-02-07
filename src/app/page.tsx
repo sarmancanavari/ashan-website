@@ -10,49 +10,41 @@ function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
       <Container>
-        <div className="flex items-center justify-between pt-10">
-          <Link href="/" className="inline-flex items-center gap-3">
-            <span className="inline-flex items-center gap-2">
+        <div className="relative pt-10">
+          {/* Left: hamburger + MENU */}
+          <button className="absolute left-0 top-10 inline-flex items-center gap-3 text-label text-white/80 hover:text-white">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/figma/assets/icons/navigation/menu-hamburger.svg" alt="" className="h-4 w-4 opacity-90" />
+            <span>MENU</span>
+          </button>
+
+          {/* Center: logo */}
+          <div className="flex justify-center">
+            <Link href="/" className="inline-flex flex-col items-center gap-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="" className="h-7 w-auto" />
-              <span className="inline-flex items-center gap-0.5">
+              <img src="/figma/assets/logos/brand/ashan-logo-star.svg" alt="Aşhan" className="h-6 w-auto" />
+              <div className="flex items-center gap-1">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/figma/assets/logos/brand/ashan-letter-a1.svg" alt="A" className="h-6 w-auto" />
+                <img src="/figma/assets/logos/brand/ashan-letter-a1.svg" alt="A" className="h-4 w-auto opacity-90" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/figma/assets/logos/brand/ashan-letter-s.svg" alt="ş" className="h-6 w-auto" />
+                <img src="/figma/assets/logos/brand/ashan-letter-s.svg" alt="Ş" className="h-4 w-auto opacity-90" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/figma/assets/logos/brand/ashan-letter-h.svg" alt="h" className="h-6 w-auto" />
+                <img src="/figma/assets/logos/brand/ashan-letter-h.svg" alt="H" className="h-4 w-auto opacity-90" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/figma/assets/logos/brand/ashan-letter-a2.svg" alt="a" className="h-6 w-auto" />
+                <img src="/figma/assets/logos/brand/ashan-letter-a2.svg" alt="A" className="h-4 w-auto opacity-90" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/figma/assets/logos/brand/ashan-letter-n.svg" alt="n" className="h-6 w-auto" />
-              </span>
-            </span>
-          </Link>
-
-          <nav className="hidden items-center gap-10 md:flex">
-            <Link href="/tr/kurumsal/hakkimizda" className="text-body-sm text-white/80 hover:text-white">
-              Kurumsal
+                <img src="/figma/assets/logos/brand/ashan-letter-n.svg" alt="N" className="h-4 w-auto opacity-90" />
+              </div>
             </Link>
-            <Link href="/tr/faaliyet-alanlari" className="text-body-sm text-white/80 hover:text-white">
-              Faaliyet Alanları
-            </Link>
-            <Link href="/tr/sirketlerimiz" className="text-body-sm text-white/80 hover:text-white">
-              Şirketlerimiz
-            </Link>
-            <Link href="/tr/iletisim" className="text-body-sm text-white/80 hover:text-white">
-              İletişim
-            </Link>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <button className="hidden rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-label text-white/90 hover:bg-white/10 md:inline-flex">
-              TR
-            </button>
-            <button className="inline-flex rounded-full bg-[var(--primary-400-main)] px-5 py-2.5 text-label text-[#1c140f] hover:bg-[var(--primary-500)]">
-              Teklif Al
-            </button>
           </div>
+
+          {/* Right: CTA */}
+          <Link
+            href="/tr/iletisim"
+            className="absolute right-0 top-10 inline-flex items-center justify-center rounded-full border border-white/25 bg-white/0 px-6 py-3 text-label text-white/80 hover:bg-white/10 hover:text-white"
+          >
+            İLETİŞİME GEÇ
+          </Link>
         </div>
       </Container>
     </header>
@@ -132,41 +124,40 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-[#2a1f16] text-white">
         <Header />
 
-        <div className="absolute inset-0 opacity-60">
-          <Image src="/figma/assets/images/hero/hero-food-1.png" alt="" fill priority className="object-cover" />
+        <div className="absolute inset-0">
+          <Image src="/figma/assets/images/menu/menu-bg-building.png" alt="" fill priority className="object-cover" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-[#2a1f16]" />
+        <div className="absolute inset-0 bg-[#2a1f16]/80" />
+        <div className="absolute inset-x-0 top-20 h-px bg-white/10" />
 
         <Container>
-          <div className="relative flex min-h-[820px] flex-col items-center justify-center pb-24 pt-44 text-center">
-            <div className="flex flex-col items-center">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/figma/assets/decorative/star-small.svg" alt="" className="h-10 w-10 opacity-90" />
+          <div className="relative flex min-h-[900px] flex-col items-center justify-center pb-28 pt-44 text-center">
+            {/* side labels */}
+            <div className="pointer-events-none absolute left-0 right-0 top-1/2 -translate-y-1/2">
+              <Container>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="h-px w-32 bg-white/15" />
+                    <div className="text-caption uppercase tracking-[0.32em] text-white/35">SERVING CENTRAL ISTANBUL</div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="text-caption uppercase tracking-[0.32em] text-white/35">ESTABLISHED 1996</div>
+                    <div className="h-px w-32 bg-white/15" />
+                  </div>
+                </div>
+              </Container>
+            </div>
 
-              <h1 className="mt-8 text-heading-xl tracking-tight text-white">
+            <div className="flex flex-col items-center">
+              <h1 className="text-heading-xl tracking-tight text-white">
                 <span className="block">KALİTE</span>
-                <span className="block text-heading-xl-italic">HİZMET</span>
+                <span className="-mt-8 block text-heading-xl-italic">HİZMET</span>
               </h1>
 
-              <p className="mt-6 max-w-[560px] text-body-lg text-white/75">
-                Catering ve ikram hizmetleri, restoran & kafeterya işletmeciliği ve entegre tesis yönetimi alanlarında güvenilir
-                çözüm ortağı.
+              <p className="mt-8 max-w-[620px] text-body-sm text-white/55">
+                Aşhan; cateringden restoran işletmeciliğine, turizmden entegre tesis yönetimine uzanan çok disiplinli yapısıyla kaliteyi
+                sürdürülebilir sistemlere dönüştürür.
               </p>
-
-              <div className="mt-10 flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/tr/faaliyet-alanlari"
-                  className="inline-flex items-center justify-center rounded-full bg-[var(--primary-400-main)] px-10 py-4 text-body-sm text-[#1c140f] hover:bg-[var(--primary-500)]"
-                >
-                  Keşfet
-                </Link>
-                <Link
-                  href="/tr/iletisim"
-                  className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-10 py-4 text-body-sm text-white hover:bg-white/10"
-                >
-                  İletişim
-                </Link>
-              </div>
             </div>
           </div>
         </Container>

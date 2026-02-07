@@ -52,6 +52,10 @@ function Header() {
 }
 
 function Footer() {
+  const version = process.env.NEXT_PUBLIC_APP_VERSION ?? "0.1.0";
+  const sha = process.env.VERCEL_GIT_COMMIT_SHA;
+  const shaShort = sha ? sha.slice(0, 7) : "local";
+
   return (
     <footer className="bg-[#1c140f] text-white/85">
       <Container>
@@ -100,16 +104,22 @@ function Footer() {
 
         <div className="flex flex-col gap-3 border-t border-white/10 py-6 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} Aşhan. Tüm hakları saklıdır.</div>
-          <div className="flex gap-4">
-            <Link href="/tr/kvkk" className="hover:text-white">
-              KVKK
-            </Link>
-            <Link href="/tr/cerez" className="hover:text-white">
-              Çerez Politikası
-            </Link>
-            <Link href="/ref/home-v2" className="hover:text-white">
-              Figma Referans
-            </Link>
+
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-6">
+            <div className="text-white/45">
+              Aşhan • v{version} • {shaShort}
+            </div>
+            <div className="flex gap-4">
+              <Link href="/tr/kvkk" className="hover:text-white">
+                KVKK
+              </Link>
+              <Link href="/tr/cerez" className="hover:text-white">
+                Çerez Politikası
+              </Link>
+              <Link href="/ref/home-v2" className="hover:text-white">
+                Figma Referans
+              </Link>
+            </div>
           </div>
         </div>
       </Container>

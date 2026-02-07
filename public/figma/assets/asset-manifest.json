@@ -1,18 +1,29 @@
 {
   "project": "Aşhan",
   "exportDate": "2026-02-07",
+  "version": 2,
   "baseUrl": "http://localhost:3845/assets",
   "designTokens": {
     "colors": {
+      "primary-50": "#f8f5ee",
+      "primary-100": "#ede7d4",
       "primary-200": "#ddcfab",
       "primary-400-main": "#bd9b60",
       "primary-500": "#aa8248",
       "primary-950": "#311e17",
       "secondary-100": "#ececd5",
+      "secondary-900-main": "#4b3d2a",
       "secondary-950": "#302418",
+      "neutral-50": "#f6f5f5",
+      "neutral-300": "#b2aeae",
+      "neutral-500": "#706a6b",
       "neutral-600": "#5f5b5b",
+      "neutral-800": "#464445",
       "neutral-950-main": "#1a1919",
-      "white-100": "#ffffff"
+      "white-100": "#ffffff",
+      "white-10": "rgba(255, 255, 255, 0.1)",
+      "primary-400-20": "rgba(189, 155, 96, 0.2)",
+      "primary-400-40": "rgba(189, 155, 96, 0.4)"
     },
     "fonts": {
       "heading": "Boska",
@@ -21,9 +32,14 @@
     "fontSizes": {
       "text-xxs": "11px",
       "text-xs": "12px",
+      "text-sm": "14px",
       "text-base": "16px",
       "text-lg": "18px",
-      "text-2xl": "24px"
+      "text-2xl": "24px",
+      "text-3xl": "32px",
+      "text-4xl": "40px",
+      "text-6xl": "56px",
+      "text-8xl": "72px"
     },
     "spacing": {
       "p-2": "8px",
@@ -54,11 +70,13 @@
     "icons": {
       "navigation": [
         {"name": "menu-hamburger", "file": "icons/navigation/menu-hamburger.svg", "hash": "22c4b95e8c686e964526072ac36011340e01b14b", "format": "svg"},
-        {"name": "arrow-left", "file": "icons/navigation/arrow-left.svg", "nodeId": "197:787", "format": "svg", "note": "Navigation arrow - get from screenshot"},
-        {"name": "arrow-right", "file": "icons/navigation/arrow-right.svg", "nodeId": "197:790", "format": "svg", "note": "Navigation arrow - get from screenshot"},
+        {"name": "close-x", "file": "icons/navigation/close-x.svg", "hash": "ef7524c5c8322613a91625986beaa8923092d9d5", "format": "svg"},
         {"name": "scroll-up", "file": "icons/navigation/scroll-up.svg", "hash": "9c518194266105c9f17536c028ae2555eb988974", "format": "svg"},
         {"name": "checkbox-check", "file": "icons/navigation/checkbox-check.svg", "hash": "35dc2506f1fdb5d3bcc63618b6a02d2ef1f8b52d", "format": "svg"},
-        {"name": "separator-line", "file": "icons/navigation/separator-line.svg", "hash": "c0889c35588d6c2bae542b8d0d4e5993e6d68a8e", "format": "svg"}
+        {"name": "separator-line", "file": "icons/navigation/separator-line.svg", "hash": "c0889c35588d6c2bae542b8d0d4e5993e6d68a8e", "format": "svg"},
+        {"name": "dropdown-arrow", "file": "icons/navigation/dropdown-arrow.svg", "hash": "74a0cdcab5508f81df796b016198675b5214b894", "format": "svg"},
+        {"name": "chevron-down", "file": "icons/navigation/chevron-down.svg", "hash": "727606256f698c3c91973e1526e09106b4e90848", "format": "svg"},
+        {"name": "dot-bullet", "file": "icons/navigation/dot-bullet.svg", "hash": "3817be70f173261e1387acbb172e9fee77e835f6", "format": "svg"}
       ],
       "social": [
         {"name": "facebook", "file": "icons/social/facebook.svg", "hash": "bccb57113729c4e0b66f7e3215925a6a6ef6459c", "format": "svg"},
@@ -70,13 +88,13 @@
     },
     "logos": {
       "brand": [
-        {"name": "ashan-logo-star", "file": "logos/brand/ashan-logo-star.svg", "hash": "42f64fbfa26365e5556d3166b724c4c29f0741db", "format": "svg", "note": "Navbar version - logo icon/star symbol"},
+        {"name": "ashan-logo-star", "file": "logos/brand/ashan-logo-star.svg", "hash": "42f64fbfa26365e5556d3166b724c4c29f0741db", "format": "svg", "note": "Navbar - yıldız sembol"},
         {"name": "ashan-letter-a1", "file": "logos/brand/ashan-letter-a1.svg", "hash": "80e299aaf3348e29dce9d92393e5a1955679b266", "format": "svg"},
         {"name": "ashan-letter-s", "file": "logos/brand/ashan-letter-s.svg", "hash": "64bb11c481267ee196896cf3bf7449070f917ba1", "format": "svg"},
         {"name": "ashan-letter-h", "file": "logos/brand/ashan-letter-h.svg", "hash": "545f7054b292e81fdfaa21451288aaaefdefa528", "format": "svg"},
         {"name": "ashan-letter-a2", "file": "logos/brand/ashan-letter-a2.svg", "hash": "21c3677672390809bd6f298f4eb4090866a71ece", "format": "svg"},
         {"name": "ashan-letter-n", "file": "logos/brand/ashan-letter-n.svg", "hash": "652a5b9fa6a27aa02773a256e5eaa470ba98dabb", "format": "svg"},
-        {"name": "ashan-logo-star-footer", "file": "logos/brand/ashan-logo-star-footer.svg", "hash": "db6aeabe0541d9a6b35a5735df759da0d9a88b44", "format": "svg", "note": "Footer version - logo star"},
+        {"name": "ashan-logo-star-footer", "file": "logos/brand/ashan-logo-star-footer.svg", "hash": "db6aeabe0541d9a6b35a5735df759da0d9a88b44", "format": "svg", "note": "Footer - yıldız sembol"},
         {"name": "ashan-footer-letter-a1", "file": "logos/brand/ashan-footer-letter-a1.svg", "hash": "d48937255889e2c1d63b13c06b48fd3987c7aa81", "format": "svg"},
         {"name": "ashan-footer-letter-s", "file": "logos/brand/ashan-footer-letter-s.svg", "hash": "af45e3ba4f4fd2adbc06aad8e561e8b9ff96707e", "format": "svg"},
         {"name": "ashan-footer-letter-h", "file": "logos/brand/ashan-footer-letter-h.svg", "hash": "1c6799864bbc654a39a63b20bc04665106faea40", "format": "svg"},
@@ -85,12 +103,12 @@
         {"name": "clockwork-credit", "file": "logos/brand/clockwork-credit.svg", "hash": "38845209c8521fa7fbb8cf1a300339e0294689b5", "format": "svg"}
       ],
       "partners": [
-        {"name": "trz-gida-icon", "file": "logos/partners/trz-gida-icon.svg", "hash": "7cef05c417cbe70b262f8a25de37899755a5083c", "format": "svg", "note": "TRZ Gıda logo - icon part"},
+        {"name": "trz-gida-icon", "file": "logos/partners/trz-gida-icon.svg", "hash": "7cef05c417cbe70b262f8a25de37899755a5083c", "format": "svg"},
         {"name": "trz-gida-icon-top", "file": "logos/partners/trz-gida-icon-top.svg", "hash": "6377f1c0c4d90c509660e6b625c9a735ad15cc17", "format": "svg"},
-        {"name": "ciftci-ziraat-icon", "file": "logos/partners/ciftci-ziraat-icon.svg", "hash": "1c8912a1c528c1ae2280d01d4cf9d4579e20d0ac", "format": "svg", "note": "Çiftçi Ziraat logo - icon part"},
+        {"name": "ciftci-ziraat-icon", "file": "logos/partners/ciftci-ziraat-icon.svg", "hash": "1c8912a1c528c1ae2280d01d4cf9d4579e20d0ac", "format": "svg"},
         {"name": "ciftci-ziraat-icon-top", "file": "logos/partners/ciftci-ziraat-icon-top.svg", "hash": "175c0d083731be44edeb6fdcc489ba932f7f6772", "format": "svg"},
-        {"name": "aha-lines", "file": "logos/partners/aha-lines.svg", "hash": "9da24e4304eb378740f73a542e591700362afc64", "format": "svg", "note": "AHA logo"},
-        {"name": "hancioglu-camburnu-icon", "file": "logos/partners/hancioglu-camburnu-icon.svg", "hash": "c932f9d268f2d00dbe81760cfbaa599c615c5ab9", "format": "svg", "note": "Hancıoğlu Çamburnü logo - icon part"}
+        {"name": "aha-lines", "file": "logos/partners/aha-a1.svg", "hash": "9da24e4304eb378740f73a542e591700362afc64", "format": "svg"},
+        {"name": "hancioglu-camburnu-icon", "file": "logos/partners/hancioglu-icon.svg", "hash": "c8faacfb62a7a4a48ee00414859d5a63cabd6990", "format": "svg"}
       ]
     },
     "images": {
@@ -100,15 +118,60 @@
         {"name": "hero-food-3", "file": "images/hero/hero-food-3.png", "hash": "fe47613f78b1e246bf9154692289073884d25326", "format": "png"},
         {"name": "hero-food-4", "file": "images/hero/hero-food-4.png", "hash": "1eede1ad694dc9a8848ae135040e66098321549d", "format": "png"}
       ],
+      "menu": [
+        {"name": "menu-bg-building", "file": "images/menu/menu-bg-building.png", "hash": "191aeea5d71bc0544a6678462bd193c2db88e9c3", "format": "png", "note": "Menü arka plan bina görseli"},
+        {"name": "menu-star-half", "file": "images/menu/menu-star-half.png", "hash": "eec9063ddb6632fe85370eb0d8c673a8435f2820", "format": "png", "note": "Menü dekoratif yarım yıldız"}
+      ],
+      "about": [
+        {"name": "about-food-1", "file": "images/about/about-food-1.png", "hash": "1ad61bf903914bb9b21621ae9c5d20d8a60bfeb4", "format": "png", "note": "Ana sayfa hakkımızda bölümü yemek 1"},
+        {"name": "about-food-2", "file": "images/about/about-food-2.png", "hash": "c73668d0581445bd38e891548486bf89f4910335", "format": "png", "note": "Ana sayfa hakkımızda bölümü yemek 2"},
+        {"name": "about-food-3", "file": "images/about/about-food-3.png", "hash": "cea435cc7533fe708dfbb0c04f984be60d682930", "format": "png", "note": "Ana sayfa hakkımızda bölümü yemek 3"}
+      ],
+      "activities": [
+        {"name": "activities-secondary-1", "file": "images/activities/activities-secondary-1.png", "hash": "fa2d3eb9f88614d01f2030ddc78351f8e0cff55b", "format": "png", "note": "Ana sayfa faaliyet bölümü ikincil görsel 1"},
+        {"name": "activities-secondary-2", "file": "images/activities/activities-secondary-2.png", "hash": "b3d8a7d55c99943dc5cea172c6eb47ed0668bc5a", "format": "png", "note": "Ana sayfa faaliyet bölümü ikincil görsel 2"}
+      ],
+      "sustainability": [
+        {"name": "sustainability-main", "file": "images/sustainability/sustainability-main.png", "hash": "4d493b9e6db1ff883694c78f8269c159c63f7d87", "format": "png", "note": "Ana sayfa sürdürülebilirlik bölümü ana fotoğraf"}
+      ],
       "blog": [
-        {"name": "blog-card-image", "file": "images/blog/blog-card-image.png", "hash": "9d920f30e9c906020988c4a040718d5ce4e394ff", "format": "png"}
+        {"name": "blog-card-1", "file": "images/blog/blog-card-1.png", "hash": "9d920f30e9c906020988c4a040718d5ce4e394ff", "format": "png"},
+        {"name": "blog-card-2", "file": "images/blog/blog-card-2.png", "hash": "961d489b762c0e4230a25b6257a4b737774565dd", "format": "png"},
+        {"name": "blog-card-3", "file": "images/blog/blog-card-3.png", "hash": "73b2653229c62e5d609fb9be3579b4f03cf588ea", "format": "png"}
+      ],
+      "faaliyet": [
+        {"name": "faaliyet-hero-1", "file": "images/faaliyet/faaliyet-hero-1.png", "hash": "3474af7469959ca45d0bf127d83352dd3d51552a", "format": "png"},
+        {"name": "faaliyet-hero-2", "file": "images/faaliyet/faaliyet-hero-2.png", "hash": "82075ca82decf2078104452712a335ecae997301", "format": "png"},
+        {"name": "faaliyet-hero-bg", "file": "images/faaliyet/faaliyet-hero-bg.png", "hash": "54cea647019f9a13a58ad1b9fe38a1e401ebb2ca", "format": "png"},
+        {"name": "faaliyet-hero-3", "file": "images/faaliyet/faaliyet-hero-3.png", "hash": "0d40466dcad433031c93f96184552073c135c01f", "format": "png"},
+        {"name": "faaliyet-hero-4", "file": "images/faaliyet/faaliyet-hero-4.png", "hash": "a8fceef1d10ae9c76dc1a4c92024eacb5784d213", "format": "png"},
+        {"name": "catering-side", "file": "images/faaliyet/catering-side.png", "hash": "5c87facf18c3fd672ff1fd6ff4a7630e95ce1922", "format": "png"},
+        {"name": "catering-main", "file": "images/faaliyet/catering-main.png", "hash": "2a985fa4cb9cf9599bbe5e637cfd8013161adb7f", "format": "png"},
+        {"name": "catering-small", "file": "images/faaliyet/catering-small.png", "hash": "d3e307c7cf51c946911ec3fed09035b03f1d2672", "format": "png"},
+        {"name": "restoran-main", "file": "images/faaliyet/restoran-main.png", "hash": "8a3c3400656824257c5ef7a0d9ab91ef230b836b", "format": "png"},
+        {"name": "turizm-otel-main", "file": "images/faaliyet/turizm-otel-main.png", "hash": "4b5249ab7349ce354ccb30609194610e5d201cdd", "format": "png"},
+        {"name": "activity-card-cleaning", "file": "images/faaliyet/activity-card-cleaning.png", "hash": "6a33980083df95f58c6b61708e9d0764613a8e39", "format": "png"},
+        {"name": "activity-card-pest-control", "file": "images/faaliyet/activity-card-pest-control.png", "hash": "aa20165b1b5aa65ac0c1b00c20d5a552a236b32f", "format": "png"}
+      ],
+      "hakkimizda": [
+        {"name": "hakkimizda-about-photo", "file": "images/hakkimizda/hakkimizda-about-photo.png", "hash": "ec303f6bb89547643adf428ceb948d108a14a030", "format": "png"},
+        {"name": "hakkimizda-mission", "file": "images/hakkimizda/hakkimizda-mission.png", "hash": "39549241a2e882178c52792936de6ec6801ad0bd", "format": "png"},
+        {"name": "hakkimizda-features", "file": "images/hakkimizda/hakkimizda-features.png", "hash": "0416952b80d86828cd45aee9643d08793ef7310e", "format": "png"},
+        {"name": "gallery-photo-1", "file": "images/hakkimizda/gallery-photo-1.png", "hash": "77175ec3d4ef4fad918808c3dc2a41dcfc99e231", "format": "png"},
+        {"name": "gallery-photo-2", "file": "images/hakkimizda/gallery-photo-2.png", "hash": "e9fcab55f465cfc75d61cc0df4a617129bd8aaa7", "format": "png"},
+        {"name": "gallery-center", "file": "images/hakkimizda/gallery-center.png", "hash": "90cdb76d2b91dbfde0cb09acae3f00f95417b9a0", "format": "png"},
+        {"name": "gallery-photo-3", "file": "images/hakkimizda/gallery-photo-3.png", "hash": "42fcf769f2d113cddf0268692bca6a09d97935a7", "format": "png"}
       ]
     },
     "decorative": [
-      {"name": "shape-mask", "file": "decorative/shape-mask.svg", "hash": "68905e01a0e835d4a0437aece6d6892b615c03fb", "format": "svg", "note": "Decorative leaf/organic shape - used as mask"},
-      {"name": "shape-fill", "file": "decorative/shape-fill.svg", "hash": "f6074c6dfebf028decf14d1c5fb6093067e61a0b", "format": "svg", "note": "Decorative leaf/organic shape - fill pattern"},
-      {"name": "arc-inner-shape", "file": "decorative/arc-inner-shape.svg", "hash": "a60cc626c557fe0a3f9f46b303bc677b02367db2", "format": "svg", "note": "Arc component - inner star shape"},
-      {"name": "arc-outer-ring", "file": "decorative/arc-outer-ring.svg", "hash": "0b6c71c1ecd001632dd1ee661a13ef195549b52c", "format": "svg", "note": "Arc component - outer ring with ASHAN text"}
+      {"name": "shape-mask", "file": "decorative/shape-mask.svg", "hash": "68905e01a0e835d4a0437aece6d6892b615c03fb", "format": "svg", "note": "Organik yaprak şekli - mask olarak kullanılır"},
+      {"name": "shape-fill", "file": "decorative/shape-fill.svg", "hash": "f6074c6dfebf028decf14d1c5fb6093067e61a0b", "format": "svg", "note": "Organik yaprak şekli - dolgu deseni"},
+      {"name": "shape-mask-alt", "file": "decorative/shape-mask-alt.svg", "hash": "63c754fc59c0f352b431eb1b30f1ffc0d36fbe1f", "format": "svg", "note": "Yaprak şekli alternatif - catering kart varyantı"},
+      {"name": "shape-fill-alt", "file": "decorative/shape-fill-alt.svg", "hash": "b3e7f2847aa4dd9e3aff80a943d5abf38cd0b514", "format": "svg", "note": "Yaprak şekli alternatif dolgu"},
+      {"name": "arc-inner-shape", "file": "decorative/arc-inner-shape.svg", "hash": "a60cc626c557fe0a3f9f46b303bc677b02367db2", "format": "svg", "note": "Arc bileşen - iç yıldız şekli"},
+      {"name": "arc-outer-ring", "file": "decorative/arc-outer-ring.svg", "hash": "0b6c71c1ecd001632dd1ee661a13ef195549b52c", "format": "svg", "note": "Arc bileşen - ASHAN yazılı dış halka"},
+      {"name": "star-small", "file": "decorative/star-small.svg", "hash": "9480b328fda18387d7020f612a57051d7a2ed907", "format": "svg", "note": "Küçük dekoratif yıldız"},
+      {"name": "star-large-outline", "file": "decorative/star-large-outline.svg", "hash": "45123b0b176617a632f671cab54f3e24e5ea99c8", "format": "svg", "note": "Büyük dekoratif yıldız (outline)"}
     ]
   }
 }

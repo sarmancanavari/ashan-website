@@ -1,13 +1,13 @@
 #!/bin/bash
-# Aşhan Figma Asset Downloader
+# Aşhan Figma Asset Downloader - v2 (Güncellenmiş)
 # Bu scripti Figma Dev Mode MCP Server açıkken terminalde çalıştırın.
 # Figma masaüstü uygulamanız açık ve Aşhan projesi yüklü olmalıdır.
 
 BASE_URL="http://localhost:3845/assets"
 OUTPUT_DIR="$(dirname "$0")"
 
-echo "🎨 Aşhan Asset Downloader"
-echo "========================="
+echo "🎨 Aşhan Asset Downloader v2"
+echo "=============================="
 echo "Figma Dev Mode MCP Server'ın aktif olduğundan emin olun."
 echo ""
 
@@ -29,13 +29,19 @@ mkdir -p "$OUTPUT_DIR/logos/brand"
 mkdir -p "$OUTPUT_DIR/logos/partners"
 mkdir -p "$OUTPUT_DIR/images/hero"
 mkdir -p "$OUTPUT_DIR/images/blog"
+mkdir -p "$OUTPUT_DIR/images/menu"
+mkdir -p "$OUTPUT_DIR/images/about"
+mkdir -p "$OUTPUT_DIR/images/activities"
+mkdir -p "$OUTPUT_DIR/images/sustainability"
+mkdir -p "$OUTPUT_DIR/images/faaliyet"
+mkdir -p "$OUTPUT_DIR/images/hakkimizda"
 mkdir -p "$OUTPUT_DIR/decorative"
 
 download() {
   local hash=$1
   local dest=$2
   local name=$3
-  printf "  ⬇️  %-40s" "$name"
+  printf "  ⬇️  %-45s" "$name"
   if curl -s -o "$OUTPUT_DIR/$dest" "$BASE_URL/$hash"; then
     echo "✅"
   else
@@ -43,12 +49,18 @@ download() {
   fi
 }
 
+COUNT=0
+
 # === ICONS - Navigation ===
 echo "📁 İkonlar - Navigasyon"
 download "22c4b95e8c686e964526072ac36011340e01b14b.svg" "icons/navigation/menu-hamburger.svg" "menu-hamburger.svg"
+download "ef7524c5c8322613a91625986beaa8923092d9d5.svg" "icons/navigation/close-x.svg" "close-x.svg"
 download "9c518194266105c9f17536c028ae2555eb988974.svg" "icons/navigation/scroll-up.svg" "scroll-up.svg"
 download "35dc2506f1fdb5d3bcc63618b6a02d2ef1f8b52d.svg" "icons/navigation/checkbox-check.svg" "checkbox-check.svg"
 download "c0889c35588d6c2bae542b8d0d4e5993e6d68a8e.svg" "icons/navigation/separator-line.svg" "separator-line.svg"
+download "74a0cdcab5508f81df796b016198675b5214b894.svg" "icons/navigation/dropdown-arrow.svg" "dropdown-arrow.svg"
+download "727606256f698c3c91973e1526e09106b4e90848.svg" "icons/navigation/chevron-down.svg" "chevron-down.svg"
+download "3817be70f173261e1387acbb172e9fee77e835f6.svg" "icons/navigation/dot-bullet.svg" "dot-bullet.svg"
 echo ""
 
 # === ICONS - Social Media ===
@@ -62,12 +74,14 @@ echo ""
 
 # === LOGOS - Brand (Aşhan) ===
 echo "📁 Logolar - Marka (Aşhan)"
+echo "  Navbar Logo:"
 download "42f64fbfa26365e5556d3166b724c4c29f0741db.svg" "logos/brand/ashan-logo-star.svg" "ashan-logo-star.svg"
 download "80e299aaf3348e29dce9d92393e5a1955679b266.svg" "logos/brand/ashan-letter-a1.svg" "ashan-letter-a1.svg"
 download "64bb11c481267ee196896cf3bf7449070f917ba1.svg" "logos/brand/ashan-letter-s.svg" "ashan-letter-s.svg"
 download "545f7054b292e81fdfaa21451288aaaefdefa528.svg" "logos/brand/ashan-letter-h.svg" "ashan-letter-h.svg"
 download "21c3677672390809bd6f298f4eb4090866a71ece.svg" "logos/brand/ashan-letter-a2.svg" "ashan-letter-a2.svg"
 download "652a5b9fa6a27aa02773a256e5eaa470ba98dabb.svg" "logos/brand/ashan-letter-n.svg" "ashan-letter-n.svg"
+echo "  Footer Logo:"
 download "db6aeabe0541d9a6b35a5735df759da0d9a88b44.svg" "logos/brand/ashan-logo-star-footer.svg" "ashan-logo-star-footer.svg"
 download "d48937255889e2c1d63b13c06b48fd3987c7aa81.svg" "logos/brand/ashan-footer-letter-a1.svg" "ashan-footer-letter-a1.svg"
 download "af45e3ba4f4fd2adbc06aad8e561e8b9ff96707e.svg" "logos/brand/ashan-footer-letter-s.svg" "ashan-footer-letter-s.svg"
@@ -89,7 +103,6 @@ download "c62b238b5debaff418dc818d9d618700334d94c3.svg" "logos/partners/trz-gida
 download "0e740ed3b392640013933e8624633eb1c183a974.svg" "logos/partners/trz-gida-i.svg" "trz-gida-i.svg"
 download "28935e6e2b6d0ee1938cb4c46e68eb3f2e788ff8.svg" "logos/partners/trz-gida-d.svg" "trz-gida-d.svg"
 download "a15ccc01d48deef7ff021f325f354e573ffae9ad.svg" "logos/partners/trz-gida-a.svg" "trz-gida-a.svg"
-
 echo "  Çiftçi Ziraat:"
 download "1c8912a1c528c1ae2280d01d4cf9d4579e20d0ac.svg" "logos/partners/ciftci-ziraat-icon.svg" "ciftci-ziraat-icon.svg"
 download "175c0d083731be44edeb6fdcc489ba932f7f6772.svg" "logos/partners/ciftci-ziraat-icon-top.svg" "ciftci-ziraat-icon-top.svg"
@@ -105,7 +118,6 @@ download "87127ab7feea30ab94825797799163897bcdd3d1.svg" "logos/partners/ciftci-z
 download "f7b29697bed0a2b31e8aa32ac08331e433ffa164.svg" "logos/partners/ciftci-ziraat-a1.svg" "ciftci-ziraat-a1.svg"
 download "cd71dd89dee5a7a72f3593db5a044a3ef32a55ed.svg" "logos/partners/ciftci-ziraat-a2.svg" "ciftci-ziraat-a2.svg"
 download "11e2d6c072f23467a33aa2d194227f555ccde4a7.svg" "logos/partners/ciftci-ziraat-t2.svg" "ciftci-ziraat-t2.svg"
-
 echo "  AHA:"
 download "9da24e4304eb378740f73a542e591700362afc64.svg" "logos/partners/aha-a1.svg" "aha-a1.svg"
 download "73b1a73ac718200403dae73577558cf25a40f323.svg" "logos/partners/aha-a1-stroke.svg" "aha-a1-stroke.svg"
@@ -119,7 +131,6 @@ download "963d3829bd88fc03ccbf5d6000d42407d1e2b76b.svg" "logos/partners/aha-star
 download "8e3dd80062e5cfd7972a9688763c1a519bf86aeb.svg" "logos/partners/aha-star-stroke.svg" "aha-star-stroke.svg"
 download "9de68d27b971abd5237a9d192360f1ca0863293f.svg" "logos/partners/aha-lines-top.svg" "aha-lines-top.svg"
 download "5320f2b19f995ac02bbb174797e832168bc07674.svg" "logos/partners/aha-lines-top-stroke.svg" "aha-lines-top-stroke.svg"
-
 echo "  Hancıoğlu Çamburnü:"
 download "1ba9ab2ab221c3bc88d383029aad4232c07618ca.svg" "logos/partners/hancioglu-h.svg" "hancioglu-h.svg"
 download "dc5bf2bd885b633764273dec6539e81cb92f6bd6.svg" "logos/partners/hancioglu-a1.svg" "hancioglu-a1.svg"
@@ -143,32 +154,97 @@ download "bccfd163bbcd8d678d00f6d88c9fb8e6dd5569fa.svg" "logos/partners/hanciogl
 download "45beaad57b246e4c75163226a209b9cef4ef1c00.svg" "logos/partners/hancioglu-baseline.svg" "hancioglu-baseline.svg"
 echo ""
 
-# === IMAGES - Hero ===
-echo "📁 Görseller - Hero"
+# === IMAGES - Hero (Ana Sayfa) ===
+echo "📁 Görseller - Hero (Ana Sayfa)"
 download "e30e705478e836a24c1fbd352e217d15585a3bd6.png" "images/hero/hero-food-1.png" "hero-food-1.png"
 download "dff73e87af2c9a8e2482471a98011d264f05b91f.png" "images/hero/hero-food-2.png" "hero-food-2.png"
 download "fe47613f78b1e246bf9154692289073884d25326.png" "images/hero/hero-food-3.png" "hero-food-3.png"
 download "1eede1ad694dc9a8848ae135040e66098321549d.png" "images/hero/hero-food-4.png" "hero-food-4.png"
 echo ""
 
+# === IMAGES - Menu ===
+echo "📁 Görseller - Menü"
+download "191aeea5d71bc0544a6678462bd193c2db88e9c3.png" "images/menu/menu-bg-building.png" "menu-bg-building.png"
+download "eec9063ddb6632fe85370eb0d8c673a8435f2820.png" "images/menu/menu-star-half.png" "menu-star-half.png"
+echo ""
+
+# === IMAGES - About (Ana Sayfa Hakkımızda Bölümü) ===
+echo "📁 Görseller - Hakkımızda Bölümü (Ana Sayfa)"
+download "1ad61bf903914bb9b21621ae9c5d20d8a60bfeb4.png" "images/about/about-food-1.png" "about-food-1.png"
+download "c73668d0581445bd38e891548486bf89f4910335.png" "images/about/about-food-2.png" "about-food-2.png"
+download "cea435cc7533fe708dfbb0c04f984be60d682930.png" "images/about/about-food-3.png" "about-food-3.png"
+echo ""
+
+# === IMAGES - Activities (Ana Sayfa Faaliyet Bölümü) ===
+echo "📁 Görseller - Faaliyet Bölümü (Ana Sayfa)"
+download "fa2d3eb9f88614d01f2030ddc78351f8e0cff55b.png" "images/activities/activities-secondary-1.png" "activities-secondary-1.png"
+download "b3d8a7d55c99943dc5cea172c6eb47ed0668bc5a.png" "images/activities/activities-secondary-2.png" "activities-secondary-2.png"
+echo ""
+
+# === IMAGES - Sustainability ===
+echo "📁 Görseller - Sürdürülebilirlik"
+download "4d493b9e6db1ff883694c78f8269c159c63f7d87.png" "images/sustainability/sustainability-main.png" "sustainability-main.png"
+echo ""
+
 # === IMAGES - Blog ===
 echo "📁 Görseller - Blog"
-download "9d920f30e9c906020988c4a040718d5ce4e394ff.png" "images/blog/blog-card-image.png" "blog-card-image.png"
+download "9d920f30e9c906020988c4a040718d5ce4e394ff.png" "images/blog/blog-card-1.png" "blog-card-1.png"
+download "961d489b762c0e4230a25b6257a4b737774565dd.png" "images/blog/blog-card-2.png" "blog-card-2.png"
+download "73b2653229c62e5d609fb9be3579b4f03cf588ea.png" "images/blog/blog-card-3.png" "blog-card-3.png"
+echo ""
+
+# === IMAGES - Faaliyet Alanları Sayfası ===
+echo "📁 Görseller - Faaliyet Alanları Sayfası"
+echo "  Hero Bölümü:"
+download "3474af7469959ca45d0bf127d83352dd3d51552a.png" "images/faaliyet/faaliyet-hero-1.png" "faaliyet-hero-1.png"
+download "82075ca82decf2078104452712a335ecae997301.png" "images/faaliyet/faaliyet-hero-2.png" "faaliyet-hero-2.png"
+download "54cea647019f9a13a58ad1b9fe38a1e401ebb2ca.png" "images/faaliyet/faaliyet-hero-bg.png" "faaliyet-hero-bg.png"
+download "0d40466dcad433031c93f96184552073c135c01f.png" "images/faaliyet/faaliyet-hero-3.png" "faaliyet-hero-3.png"
+download "a8fceef1d10ae9c76dc1a4c92024eacb5784d213.png" "images/faaliyet/faaliyet-hero-4.png" "faaliyet-hero-4.png"
+echo "  Catering (Toplu Yemek):"
+download "5c87facf18c3fd672ff1fd6ff4a7630e95ce1922.png" "images/faaliyet/catering-side.png" "catering-side.png"
+download "2a985fa4cb9cf9599bbe5e637cfd8013161adb7f.png" "images/faaliyet/catering-main.png" "catering-main.png"
+download "d3e307c7cf51c946911ec3fed09035b03f1d2672.png" "images/faaliyet/catering-small.png" "catering-small.png"
+echo "  Restoran & Kafeterya:"
+download "8a3c3400656824257c5ef7a0d9ab91ef230b836b.png" "images/faaliyet/restoran-main.png" "restoran-main.png"
+echo "  Turizm & Otel:"
+download "4b5249ab7349ce354ccb30609194610e5d201cdd.png" "images/faaliyet/turizm-otel-main.png" "turizm-otel-main.png"
+echo "  Faaliyet Kartları:"
+download "6a33980083df95f58c6b61708e9d0764613a8e39.png" "images/faaliyet/activity-card-cleaning.png" "activity-card-cleaning.png"
+download "aa20165b1b5aa65ac0c1b00c20d5a552a236b32f.png" "images/faaliyet/activity-card-pest-control.png" "activity-card-pest-control.png"
+echo ""
+
+# === IMAGES - Hakkımızda Sayfası ===
+echo "📁 Görseller - Hakkımızda Sayfası"
+download "ec303f6bb89547643adf428ceb948d108a14a030.png" "images/hakkimizda/hakkimizda-about-photo.png" "hakkimizda-about-photo.png"
+download "39549241a2e882178c52792936de6ec6801ad0bd.png" "images/hakkimizda/hakkimizda-mission.png" "hakkimizda-mission.png"
+download "0416952b80d86828cd45aee9643d08793ef7310e.png" "images/hakkimizda/hakkimizda-features.png" "hakkimizda-features.png"
+echo "  Galeri:"
+download "77175ec3d4ef4fad918808c3dc2a41dcfc99e231.png" "images/hakkimizda/gallery-photo-1.png" "gallery-photo-1.png"
+download "e9fcab55f465cfc75d61cc0df4a617129bd8aaa7.png" "images/hakkimizda/gallery-photo-2.png" "gallery-photo-2.png"
+download "90cdb76d2b91dbfde0cb09acae3f00f95417b9a0.png" "images/hakkimizda/gallery-center.png" "gallery-center.png"
+download "42fcf769f2d113cddf0268692bca6a09d97935a7.png" "images/hakkimizda/gallery-photo-3.png" "gallery-photo-3.png"
 echo ""
 
 # === DECORATIVE ===
 echo "📁 Dekoratif Elementler"
 download "68905e01a0e835d4a0437aece6d6892b615c03fb.svg" "decorative/shape-mask.svg" "shape-mask.svg"
 download "f6074c6dfebf028decf14d1c5fb6093067e61a0b.svg" "decorative/shape-fill.svg" "shape-fill.svg"
+download "63c754fc59c0f352b431eb1b30f1ffc0d36fbe1f.svg" "decorative/shape-mask-alt.svg" "shape-mask-alt.svg"
+download "b3e7f2847aa4dd9e3aff80a943d5abf38cd0b514.svg" "decorative/shape-fill-alt.svg" "shape-fill-alt.svg"
 download "a60cc626c557fe0a3f9f46b303bc677b02367db2.svg" "decorative/arc-inner-shape.svg" "arc-inner-shape.svg"
 download "0b6c71c1ecd001632dd1ee661a13ef195549b52c.svg" "decorative/arc-outer-ring.svg" "arc-outer-ring.svg"
+download "9480b328fda18387d7020f612a57051d7a2ed907.svg" "decorative/star-small.svg" "star-small.svg"
+download "45123b0b176617a632f671cab54f3e24e5ea99c8.svg" "decorative/star-large-outline.svg" "star-large-outline.svg"
 echo ""
 
-echo "========================="
+echo "=============================="
 echo "✅ İndirme tamamlandı!"
 echo "📂 Dosyalar: $OUTPUT_DIR"
 echo ""
-echo "Klasör yapısı:"
-find "$OUTPUT_DIR" -name "*.svg" -o -name "*.png" | sort | while read f; do
-  echo "  $(echo $f | sed "s|$OUTPUT_DIR/||")"
-done
+echo "Toplam dosya sayısı:"
+SVG_COUNT=$(find "$OUTPUT_DIR" -name "*.svg" | wc -l)
+PNG_COUNT=$(find "$OUTPUT_DIR" -name "*.png" | wc -l)
+echo "  SVG: $SVG_COUNT"
+echo "  PNG: $PNG_COUNT"
+echo "  Toplam: $((SVG_COUNT + PNG_COUNT))"

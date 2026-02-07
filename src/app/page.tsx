@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 function Container({ children }: { children: React.ReactNode }) {
-  // Pixel-perfect reference: 1440px desktop frame
-  return <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-20">{children}</div>;
+  // Pixel-perfect reference: Figma desktop frame = 1440px
+  // Keep desktop paddings stable (section rhythm comes from consistent container padding)
+  return <div className="mx-auto w-full max-w-[1440px] px-6 md:px-10 lg:px-[80px]">{children}</div>;
 }
 
 function Header() {
@@ -179,42 +180,62 @@ export default function HomePage() {
       </section>
 
       {/* Intro row (light) */}
-      <section className="bg-[#f4f0e8] py-16">
+      <section className="bg-[#f4f0e8] py-[120px]">
         <Container>
           <div className="grid gap-10 md:grid-cols-12 md:items-center">
             <div className="md:col-span-7">
-              <h2 className="text-2xl font-semibold leading-tight sm:text-3xl">
+              <h2 className="text-heading-3xl text-[#1c140f]">
                 Aşhan, operasyonel mükemmelliğin mimarı
                 <br />
                 deneyimin en üst seviyesi.
               </h2>
-              <div className="mt-6 grid gap-4 sm:grid-cols-3">
-                <div className="overflow-hidden rounded-2xl bg-white/70 p-4">
-                  <div className="text-xs font-semibold text-[#8b6b55]">Catering</div>
-                  <div className="mt-2 text-sm font-semibold">İkram hizmetleri</div>
+              <p className="mt-5 max-w-[520px] text-body text-[#3b2a20]/70">
+                28 yılı aşkın deneyimimizle operasyonel kabiliyetimizi paydaşlarımızın faydasına sunuyor, kaliteyi standart haline
+                getiriyoruz.
+              </p>
+
+              {/* photo collage (Figma: layered cards) */}
+              <div className="relative mt-12 h-[240px]">
+                <div className="absolute left-0 top-8 h-[160px] w-[200px] -rotate-[7deg] overflow-hidden rounded-2xl bg-white shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+                  <Image src="/figma/assets/images/hero/hero-food-1.png" alt="" fill className="object-cover" />
                 </div>
-                <div className="overflow-hidden rounded-2xl bg-white/70 p-4">
-                  <div className="text-xs font-semibold text-[#8b6b55]">Restoran</div>
-                  <div className="mt-2 text-sm font-semibold">Kafeterya</div>
+                <div className="absolute left-[120px] top-0 h-[190px] w-[260px] rotate-[4deg] overflow-hidden rounded-2xl bg-white shadow-[0_20px_60px_rgba(0,0,0,0.10)]">
+                  <Image src="/figma/assets/images/about/about-food-1.png" alt="" fill className="object-cover" />
                 </div>
-                <div className="overflow-hidden rounded-2xl bg-white/70 p-4">
-                  <div className="text-xs font-semibold text-[#8b6b55]">Tesis</div>
-                  <div className="mt-2 text-sm font-semibold">Yönetim sistemleri</div>
+                <div className="absolute left-[40px] top-[120px] h-[130px] w-[170px] rotate-[10deg] overflow-hidden rounded-2xl bg-white shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+                  <Image src="/figma/assets/images/hero/hero-food-2.png" alt="" fill className="object-cover" />
                 </div>
               </div>
             </div>
             <div className="md:col-span-5">
-              <div className="rounded-3xl border border-[#1c140f]/10 bg-white/60 p-6">
-                <div className="text-xs font-semibold tracking-wider text-[#8b6b55]">Not</div>
-              <div className="mt-2 text-[11px] font-semibold text-[#8b6b55]/80">Design tokens: <code>design-tokens.css</code> yüklendi.</div>
-                <p className="mt-3 text-sm leading-7 text-[#3b2a20]/80">
-                  Bu sayfa şu an statik ilerliyor. Umbraco headless bağlandığında başlıklar, görseller ve kartlar içerikten
-                  gelecek.
-                </p>
-                <div className="mt-4">
-                  <Link href="/ref/home-v2" className="text-xs font-semibold text-[#8b6b55] hover:underline">
-                    Figma referans görselini aç →
-                  </Link>
+              <div className="rounded-3xl bg-transparent pt-1">
+                <div className="flex items-start gap-5">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/figma/assets/logos/brand/ashan-logo-star.svg"
+                    alt=""
+                    className="mt-1 h-8 w-8 opacity-80"
+                  />
+                  <div>
+                    <div className="text-xs font-semibold tracking-wider text-[#8b6b55]">HAKKIMIZDA</div>
+                    <p className="mt-4 text-sm leading-7 text-[#3b2a20]/80">
+                      Figma Anasayfa (1440) referansı birebir uygulanıyor. Bu alandaki içerikler Umbraco headless bağlandığında
+                      içerikten beslenecek.
+                    </p>
+                    <div className="mt-6">
+                      <Link
+                        href="/tr/kurumsal/hakkimizda"
+                        className="inline-flex items-center justify-center rounded-full bg-[#bd9b60] px-6 py-3 text-xs font-semibold tracking-[0.28em] text-[#1c140f]"
+                      >
+                        DETAY
+                      </Link>
+                    </div>
+                    <div className="mt-6">
+                      <Link href="/ref/home-v2" className="text-xs font-semibold text-[#8b6b55] hover:underline">
+                        Figma referans görselini aç →
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -223,7 +244,7 @@ export default function HomePage() {
       </section>
 
       {/* Dark cards section */}
-      <section className="bg-[#2a1f16] py-16 text-white">
+      <section className="bg-[#2a1f16] py-[120px] text-white">
         <Container>
           <div className="grid gap-6 lg:grid-cols-12">
             <div className="lg:col-span-5">
@@ -250,7 +271,7 @@ export default function HomePage() {
       </section>
 
       {/* Logo strip */}
-      <section className="bg-[#f4f0e8] py-14">
+      <section className="bg-[#f4f0e8] py-[96px]">
         <Container>
           <div className="text-center text-sm font-semibold text-[#3b2a20]/80">
             Ortak değerler etrafında şekillenen, farklı alanlarda güçlü markalar.
@@ -273,7 +294,7 @@ export default function HomePage() {
       </section>
 
       {/* Image row */}
-      <section className="bg-[#f4f0e8] py-16">
+      <section className="bg-[#f4f0e8] py-[120px]">
         <Container>
           <div className="grid gap-8 md:grid-cols-12 md:items-center">
             <div className="relative h-72 overflow-hidden rounded-3xl bg-zinc-200 md:col-span-7">
